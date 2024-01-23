@@ -1,0 +1,153 @@
+/* Хлебные крошки */
+.breadcrumbs { color: #888; font-size: 12px; font-weight: var(--font-weight-normal); margin-top: 30px; }
+.breadcrumbs ul { display: flex; flex-wrap: wrap; }
+.breadcrumbs ul li:not(:last-child) { margin-right: 10px; padding-right: 13px; position: relative; }
+.breadcrumbs ul li:not(:last-child):after { content: ">"; position: absolute; right: 0; }
+.breadcrumbs a { color: var(--color-white); }
+.breadcrumbs a:hover { color: var(--color-orange); }
+.breadcrumbs + div { margin-top: 70px; }
+
+/* О нас */
+.about { margin-top: 120px; }
+.about .about__wrapp { display: flex; align-items: center; }
+.about .about__wrapp:nth-child(even) .about__content { order: 2; padding: 0 0 0 30px; }
+.about .about__wrapp:nth-child(even) .about__image { order: 1; padding: 0 30px 0 0; }
+.about .about__wrapp + .about__wrapp { margin-top: 120px; }
+.about .about__content { padding-right: 30px; width: var(--50-percent); }
+.about .about__image { padding-left: 30px; width: var(--50-percent); font-size: var(--size-0); }
+.about .about__image img { width: var(--100-percent); border-radius: 24px; }
+.about .about__button { margin-top: 30px; }
+
+/* Видео */
+.video { margin-top: 120px; }
+.video .video__player { border-radius: 24px; overflow: hidden; }
+.video .video__player a { display: block; position: relative; }
+.video .video__player a:before { content: ""; position: absolute; left: var(--50-percent); top: var(--50-percent); width: 66px; height: 66px; border-radius: var(--50-percent); background: url(../img/icons/play.svg) center center no-repeat; background-size: contain; margin: -33px 0 0 -33px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+.video .video__player a:hover:before { background: url(../img/icons/play-h.svg) center center no-repeat; background-size: contain; }
+.video .video__player img { width: var(--100-percent); }
+
+/* Схема работы */
+.stages { margin-top: 80px; }
+.stages .title { text-align: center; }
+.stages .stages__list { display: flex; flex-wrap: wrap; justify-content: center; margin: -9px; }
+.stages .stages__button { margin-top: 40px; text-align: center; }
+.stages .stages__button .btn { min-width: 175px; }
+.stage { width: calc(20% - 18px); margin: 9px; border-radius: 16px; background: #2D2C2C; padding: 25px 16px; }
+.stage .stage__num { font-size: 46px; font-weight: 600; line-height: 1; color: #2D2C2C; text-shadow: 1px 0 #4E4E4E, 0 -1px #4E4E4E, -1px 0 #4E4E4E, 0 1px #4E4E4E; letter-spacing: 2px; }
+.stage .stage__name { margin-top: 20px; font-size: 18px; font-weight: 600; }
+.stage .stage__descr { margin-top: 15px; color: #B0B0B0; font-size: 13px; font-weight: var(--font-weight-normal); line-height: 1.5; }
+
+/* Консультация */
+.consultation { margin-top: 80px; }
+.consultation .consultation__wrapp { border-radius: 24px; background: var(--color-white); padding: 35px 60px; display: flex; align-items: center; position: relative; z-index: 1; }
+.consultation .title h2 { color: var(--color-orange); }
+.consultation .title p { color: #1E1D1D; }
+.consultation .consultation__form { width: var(--50-percent); padding-right: 20px; }
+.consultation .consultation__form form { max-width: 360px; }
+.consultation .consultation__form .btn { width: var(--100-percent); }
+.consultation .consultation__image { font-size: var(--size-0); padding-left: 20px; text-align: center; width: var(--50-percent); }
+.consultation .consultation__image img { max-width: var(--100-percent); }
+
+/* Вопросы */
+.faqs { margin-top: 120px; }
+.faqs .title { text-align: center; }
+.faqs .faqs__list { max-width: 880px; margin: 0 auto; }
+.faqs .faqs__button { margin-top: 40px; text-align: center; }
+.faqs .faqs__button .btn { min-width: 250px; }
+.faq { border-bottom: 1px solid #4A4747; padding-top: 32px; }
+.faq .faq__question { font-size: 22px; padding: 0 60px 0 0; position: relative; cursor: pointer; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; margin-bottom: 32px; font-weight: var(--font-weight-normal); }
+.faq .faq__question:after { content: ""; position: absolute; width: 18px; height: 10px; top: 10px; right: 0; background: url(../img/icons/arrow-faq.svg) center center no-repeat; background-size: contain; -moz-transition: all 0.3s; -o-transition: all 0.3s; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.faq .faq__question:hover { color: var(--color-orange); }
+.faq .faq__answer { display: none; font-size: 18px; line-height: 1.3; padding: 0 0 32px 0; }
+.faq .faq__answer p + p { margin-top: 15px; }
+.faq.open .faq__question { color: var(--color-orange); }
+.faq.open .faq__question:after { -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
+
+@media screen and (max-width: 1279px) {
+  .breadcrumbs { margin-top: 25px; }
+  .breadcrumbs + div { margin-top: 65px; }
+  .about .about__content { padding-right: 25px; }
+  .about .about__image { padding-left: 25px; }
+  .about .about__image img { border-radius: 20px; }
+  .about .about__wrapp:nth-child(even) .about__content { padding: 0 0 0 25px; }
+  .about .about__wrapp:nth-child(even) .about__image { padding: 0 25px 0 0; }
+  .about .about__wrapp + .about__wrapp { margin-top: 100px; }
+  .stages .stages__button .btn { min-width: 160px; }
+  .stage { width: calc(33.33333333% - 18px); }
+  .stage .stage__num { font-size: 42px; }
+  .stage .stage__name { font-size: 16px; }
+  .consultation .consultation__wrapp { border-radius: 20px; padding: 30px 50px; }
+  .consultation .consultation__form form { max-width: 320px; }
+  .faqs .faqs__list { max-width: 840px; }
+  .faqs .faqs__button .btn { min-width: 220px; }
+  .faq { padding-top: 30px; }
+  .faq .faq__question { font-size: 20px; margin-bottom: 30px; }
+  .faq .faq__question:after { width: 16px; height: 9px; top: 9px; }
+  .faq .faq__answer { font-size: 17px; padding: 0 0 30px 0; }
+}
+@media screen and (max-width: 991px) {
+  .breadcrumbs { margin-top: 20px; }
+  .breadcrumbs + div { margin-top: 60px; }
+  .about { margin-top: 120px; }
+  .about .about__content { padding-right: 20px; }
+  .about .about__image { padding-left: 20px; }
+  .about .about__image img { border-radius: 16px; }
+  .about .about__wrapp:nth-child(even) .about__content { padding: 0 0 0 20px; }
+  .about .about__wrapp:nth-child(even) .about__image { padding: 0 20px 0 0; }
+  .about .about__wrapp + .about__wrapp { margin-top: 80px; }
+  .stage { width: calc(var(--50-percent) - 18px); }
+  .stage .stage__num { font-size: 38px; }
+  .consultation .consultation__wrapp { padding: 30px 40px; }
+  .consultation .consultation__form form { max-width: 280px; }
+  .faqs { margin-top: 120px; }
+  .faqs .faqs__list { max-width: 800px; }
+  .faqs .faqs__button .btn { min-width: 180px; }
+  .faq { padding-top: 26px; }
+  .faq .faq__question { font-size: 18px; margin-bottom: 26px; }
+  .faq .faq__question:after { width: 14px; height: 8px; top: 8px; }
+  .faq .faq__answer { font-size: 16px; padding: 0 0 26px 0; }
+}
+@media screen and (max-width: 767px) {
+  .breadcrumbs { margin-top: 15px; }
+  .breadcrumbs + div { margin-top: 55px; }
+  .about { margin-top: 100px; }
+  .about .about__wrapp { display: block; }
+  .about .about__wrapp:nth-child(even) .about__content { padding: 0; }
+  .about .about__wrapp:nth-child(even) .about__image { padding: 60px 0 0; }
+  .about .about__wrapp + .about__wrapp { margin-top: 60px; }
+  .about .about__content { padding-right: 0; width: var(--100-percent); }
+  .about .about__image { width: var(--100-percent); padding: 60px 0 0; }
+  .consultation .consultation__wrapp { padding: 30px; display: block; }
+  .consultation .consultation__form { width: var(--100-percent); padding: 0; }
+  .consultation .consultation__form form { max-width: var(--100-percent); }
+  .consultation .consultation__image { padding: 50px 0 0; width: var(--100-percent); }
+  .faqs { margin-top: 100px; }
+  .faq { padding-top: 22px; }
+  .faq .faq__question { margin-bottom: 22px; padding-right: 40px; }
+  .faq .faq__question:after { width: 12px; height: 7px; top: 9px; }
+  .faq .faq__answer { padding: 0 0 22px 0; }
+}
+@media screen and (max-width: 574px) {
+  .breadcrumbs { margin-top: 10px; }
+  .breadcrumbs + div { margin-top: 50px; }
+  .about { margin-top: 80px; }
+  .about .about__wrapp .about__image { padding: 40px 0 0; }
+  .about .about__wrapp:nth-child(even) .about__image { padding: 40px 0 0; }
+  .about .about__wrapp + .about__wrapp { margin-top: 40px; }
+  .stages .stages__list { display: block; margin: 0; }
+  .stage { width: var(--100-percent); margin: 0; }
+  .stage + .stage { margin-top: 18px; }
+  .stage .stage__descr { font-size: 14px; }
+  .consultation .consultation__wrapp { padding: 30px 20px; }
+  .faq { padding-top: 18px; }
+  .faq .faq__question { margin-bottom: 18px; padding-right: 30px; font-size: 16px; }
+  .faq .faq__question:after { width: 10px; height: 6px; }
+  .faq .faq__answer { padding: 0 0 18px 0; }
+}
+@media screen and (max-width: 424px) {
+  .breadcrumbs { margin-top: 5px; }
+  .breadcrumbs + div { margin-top: 45px; }
+  .about { margin-top: 60px; }
+  .stages { margin-top: 60px; }
+  .consultation { margin-top: 60px; }
+}

@@ -1,0 +1,134 @@
+/* Хлебные крошки */
+.breadcrumbs { color: #888; font-size: 12px; font-weight: var(--font-weight-normal); margin-top: 30px; }
+.breadcrumbs ul { display: flex; flex-wrap: wrap; }
+.breadcrumbs ul li:not(:last-child) { margin-right: 10px; padding-right: 13px; position: relative; }
+.breadcrumbs ul li:not(:last-child):after { content: ">"; position: absolute; right: 0; }
+.breadcrumbs a { color: var(--color-white); }
+.breadcrumbs a:hover { color: var(--color-orange); }
+.breadcrumbs + div { margin-top: 70px; }
+
+/* Страница изделия или проекта */
+.productdetail .productdetail__wrapp { display: flex; }
+.productdetail .productdetail__images { width: 54%; }
+.productdetail .productdetail__slideshow { border-radius: 24px; overflow: hidden; }
+.productdetail .productdetail__thumbs { margin-top: 20px; padding: 0 50px; }
+.productdetail .productdetail__thumbs .owl-prev, .productdetail .productdetail__thumbs .owl-next { position: absolute; top: var(--50-percent); margin-top: -12px; }
+.productdetail .productdetail__thumbs .owl-prev { left: 0; }
+.productdetail .productdetail__thumbs .owl-next { right: 0; }
+.productdetail .productdetail__thumb { border-radius: 12px; overflow: hidden; }
+.productdetail .productdetail__content { width: 46%; padding-left: 70px; }
+.productdetail .productdetail__name h1 { font-size: 32px; font-weight: var(--font-weight-semibold); }
+.productdetail .productdetail__art { margin-top: 32px; color: #9B9B9B; font-size: 15px; font-weight: var(--font-weight-normal); }
+.productdetail .productdetail__price { font-size: 18px; font-weight: var(--font-weight-normal); line-height: 1.3; margin-top: 32px; }
+.productdetail .productdetail__price span { color: var(--color-orange); }
+.productdetail .productdetail__info { font-size: 15px; margin-top: 35px; line-height: 1.3; }
+.productdetail .productdetail__info > * + * { margin-top: 16px; }
+.productdetail .productdetail__info ul { margin-top: 30px; }
+.productdetail .productdetail__info ul + * { margin-top: 30px; }
+.productdetail .productdetail__info ul li { padding-left: 18px; position: relative; }
+.productdetail .productdetail__info ul li:before { content: ""; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: var(--50-percent); background: linear-gradient(to right, var(--color-orange), var(--color-orange-dark)); }
+.productdetail .productdetail__info ul li + li { margin-top: 12px; }
+.productdetail .productdetail__buttons { margin: 22px -8px -8px; display: flex; flex-wrap: wrap; }
+.productdetail .productdetail__buttons .btn { margin: 8px; min-width: 210px; }
+
+/* Изделия или проекты - список */
+.products-carousel { margin-top: 120px; }
+.products-carousel .owl-stage { display: flex; }
+.products-carousel .owl-stage .product { height: var(--100-percent); }
+
+.products .products__tiles { margin: -18px -8px; display: flex; flex-wrap: wrap; }
+.products .products__tiles .product { width: calc(25% - 16px); margin: 18px 8px; }
+.products .products__more { text-align: center; margin-top: 60px; }
+.products .products__more .btn { min-width: 175px; }
+
+.product { display: flex; flex-direction: column; }
+.product .product__image a { position: relative; display: block; }
+.product .product__image a:before { content: ""; display: block; padding-top: 66%; }
+.product .product__image a img { position: absolute; left: 0; top: 0; width: var(--100-percent); height: var(--100-percent); object-fit: cover; border-radius: 16px; }
+.product .product__name { margin-top: 25px; margin-bottom: 16px; }
+.product .product__name a { font-size: 18px; font-weight: var(--font-weight-normal); line-height: 1.3; }
+.product .product__name a:hover { color: var(--color-orange); }
+.product .product__price { font-size: 18px; font-weight: var(--font-weight-normal); line-height: 1.3; margin-top: auto; }
+.product .product__price span { color: var(--color-orange); }
+.product .product__city { font-size: 18px; font-weight: var(--font-weight-normal); line-height: 1.3; margin-top: auto; padding-left: 30px; position: relative; }
+.product .product__city:before { content: ""; position: absolute; left: 0; top: 0px; width: 18px; height: 21px; background: url(../img/icons/pointer.svg) center center no-repeat; background-size: contain; }
+.product .product__button { margin-top: 16px; padding: 1px; }
+.product .product__button .btn { min-width: 175px; }
+
+@media screen and (max-width: 1279px) {
+  .breadcrumbs { margin-top: 25px; }
+  .breadcrumbs + div { margin-top: 65px; }
+  .products .products__more { margin-top: 55px; }
+  .products .products__more .btn { min-width: 160px; }
+  .product .product__image a img { border-radius: 14px; }
+  .product .product__name { margin-top: 20px; }
+  .product .product__name a { font-size: 17px; }
+  .product .product__price { font-size: 17px; }
+  .product .product__city { font-size: 17px; padding-left: 28px; }
+  .product .product__city:before { width: 16px; height: 19px; }
+  .product .product__button .btn { min-width: 160px; }
+  .productdetail .productdetail__images { width: 52%; }
+  .productdetail .productdetail__slideshow { border-radius: 20px; }
+  .productdetail .productdetail__thumbs { padding: 0 40px; }
+  .productdetail .productdetail__content { padding-left: 50px; width: 48%; }
+  .productdetail .productdetail__name h1 { font-size: 28px; }
+  .productdetail .productdetail__art { margin-top: 30px; }
+  .productdetail .productdetail__price { font-size: 17px; margin-top: 30px; }
+  .productdetail .productdetail__info { margin-top: 30px; }
+  .productdetail .productdetail__info ul { margin-top: 25px; }
+  .productdetail .productdetail__info ul + * { margin-top: 25px; }
+  .productdetail .productdetail__info ul li + li { margin-top: 10px; }
+  .productdetail .productdetail__buttons { margin: 20px -8px -8px; }
+  .productdetail .productdetail__buttons .btn { min-width: 170px; }
+}
+@media screen and (max-width: 991px) {
+  .breadcrumbs { margin-top: 20px; }
+  .breadcrumbs + div { margin-top: 60px; }
+  .products .products__more { margin-top: 50px; }
+  .products .products__more .btn { min-width: 145px; }
+  .products .products__tiles .product { width: calc(33.33333333% - 16px); }
+  .product .product__image a img { border-radius: 12px; }
+  .product .product__name a { font-size: 16px; }
+  .product .product__price { font-size: 16px; }
+  .product .product__city { font-size: 16px; padding-left: 24px; }
+  .product .product__city:before { width: 14px; height: 17px; }
+  .product .product__button .btn { min-width: 145px; }
+  .productdetail .productdetail__slideshow { border-radius: 16px; }
+  .productdetail .productdetail__content { padding-left: 30px; }
+  .productdetail .productdetail__name h1 { font-size: 24px; }
+  .productdetail .productdetail__art { margin-top: 25px; }
+  .productdetail .productdetail__price { font-size: 16px; margin-top: 25px; }
+  .productdetail .productdetail__info { margin-top: 25px; }
+  .productdetail .productdetail__info ul { margin-top: 20px; }
+  .productdetail .productdetail__info ul + * { margin-top: 20px; }
+  .productdetail .productdetail__buttons .btn { min-width: 230px; }
+}
+@media screen and (max-width: 767px) {
+  .breadcrumbs { margin-top: 15px; }
+  .breadcrumbs + div { margin-top: 55px; }
+  .products .products__more { margin-top: 45px; }
+  .products .products__tiles .product { width: calc(var(--50-percent) - 16px); }
+  .productdetail .productdetail__wrapp { display: block; }
+  .productdetail .productdetail__images { width: var(--100-percent); padding: 0; }
+  .productdetail .productdetail__slideshow { border-radius: 12px; }
+  .productdetail .productdetail__content { padding: 50px 0 0; width: var(--100-percent); }
+  .productdetail .productdetail__name h1 { font-size: 20px; }
+  .productdetail .productdetail__art { margin-top: 20px; }
+  .productdetail .productdetail__price { margin-top: 20px; }
+  .productdetail .productdetail__info { margin-top: 20px; }
+  .productdetail .productdetail__info ul { margin-top: 15px; }
+  .productdetail .productdetail__info ul + * { margin-top: 15px; }
+  .productdetail .productdetail__buttons .btn { min-width: 200px; }
+}
+@media screen and (max-width: 574px) {
+  .products-carousel { margin-top: 80px; }
+  .products .products__more { margin-top: 40px; }
+  .product .product__name { margin-top: 15px; }
+  .product .product__button .btn { min-width: 0; width: var(--100-percent); }
+  .productdetail .productdetail__buttons { display: block; text-align: center; margin: 25px 0 0; }
+  .productdetail .productdetail__buttons .btn { min-width: 240px; width: auto; max-width: var(--100-percent); margin: 0; }
+  .productdetail .productdetail__buttons .btn + .btn { margin: 16px 0 0; }
+}
+@media screen and (max-width: 424px) {
+  .products-carousel { margin-top: 60px; }
+}
